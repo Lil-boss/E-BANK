@@ -46,10 +46,12 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
   //get amount
   const newTotalAmount = getAmount("w-amount");
 
-  if (newTotalAmount > 0) {
+  if (newTotalAmount > 0 && newTotalAmount <= getCurrentBalance()) {
     //update amount
     updateAmount("w-balance", newTotalAmount);
     //minus balance
     balanceAdd(newTotalAmount, false);
+  } else {
+    alert("Invalid Amount");
   }
 });
