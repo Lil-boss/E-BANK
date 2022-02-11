@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin panel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="text-4xl text-center mt-3">
+        Welcome To <span class="text-sky-600">Admin panel</span>
+      </h1>
+    </header>
+
+    <main>
+      <section class="mt-8">
+        <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto">
+          <div class="bg-sky-200 p-8 text-3xl rounded">
+            <h5>Deposit</h5>
+            <h3>$ <span id="d-balance">00</span></h3>
+          </div>
+          <div class="bg-blue-200 p-8 text-3xl rounded">
+            <h5>withdraw</h5>
+            <h3>$ <span id="w-balance">00</span></h3>
+          </div>
+          <div class="bg-green-200 p-8 text-3xl rounded">
+            <h5>Balance</h5>
+            <h3>$ <span id="balance">145</span></h3>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="grid grid-cols-2 gap-8 w-3/4 mx-auto mt-12">
+          <div
+            class="bg-slate-300 shadow w-full rounded-lg divide-y divide-gray-200"
+          >
+            <div class="px-5 py-7">
+              <h4>Deposit</h4>
+              <input
+                id="d-amount"
+                type="text"
+                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                placeholder="$$$"
+              />
+              <button
+                id="deposit-btn"
+                type="button"
+                class="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+              >
+                <span class="inline-block mr-2">Deposit</span>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-slate-300 shadow w-full rounded-lg divide-y divide-gray-200"
+          >
+            <div class="px-5 py-7">
+              <h4>Withdraw</h4>
+              <input
+                id="w-amount"
+                type="text"
+                class="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+                placeholder="$$$"
+              />
+              <button
+                id="withdraw-btn"
+                type="button"
+                class="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block"
+              >
+                <span class="inline-block mr-2">Withdraw</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/banking.js"></script>
+  </body>
+</html>
